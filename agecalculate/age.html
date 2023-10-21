@@ -1,0 +1,155 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="age.css">
+    <title>Age calculater</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculater">
+
+            <h1>You can calculate your age here!</h1>
+            <div class="input-box"></div>
+            <input type="date" id="date">
+            <button onclick="calculateAge()">Calculate</button>
+
+        </div>
+
+    </div>
+
+    <script>
+        let userInput = document.getElementById("data");
+        userInput.max = new Date().toISOString().split("T")[0];
+
+        function calculateAge() {
+            let birthDate = new Date(userInput.value);
+
+
+            let d1 = birthDtae.getDate();
+
+            let m1 = birthDtae.getMonth() + 1;
+
+
+            let y1 = birthDtae.getFullyear();
+
+
+            let today = new Date();
+
+            let d2 = birthDtae.getDate();
+
+            let m2 = birthDtae.getMonth() + 1;
+
+
+            let y2 = birthDtae.getFullyear();
+
+            let d3, m3, y3;
+
+            y3 = y2 - y1;
+            if (m2 >= m1) {
+
+                m3 = m2 - m1;
+
+            } else {
+
+                y3--;
+
+                m3 = 12 + m2 - m1;
+
+            }
+
+            if (d2 >= d1) {
+
+                d3 = d2 - d1; 
+            }
+   
+
+            else {
+         m3--;
+         d3 = getDaysInMonth(y1,m1) +d2 - d1;
+        }
+
+        if(m3<0)
+        {
+            m3 =11;
+            y3--;
+        }
+        
+
+
+            }
+
+            function getDaysInMonth(year,month)
+            {
+                return new Date(year,month,0).getData();
+            }
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="age.css">
+    <title>Password</title>
+</head>
+<body>
+    <div class="container">
+        <div class="input-box">
+         <input type = "password" id = "password" placeholder="password">
+          <button type = "submit"><img src = "arrow.png"</button>
+          <p id = " message ">Password is <span id = "strength" ></span></p>
+
+        </div>
+
+    </div>
+
+    <script>
+        var pass = document.getElementById("password");
+        var msg = document.getElementById("message");
+        var str = document.getElementById("strength");
+
+      pass.addEventListener('input', () =>
+      {
+        if(pass.value.length > 0)
+        {
+            msg.style.display = "block";
+        }
+        else 
+        {
+            msg.style.display = "none";
+        }
+
+        if(pass.value.length < 4)
+        {
+            str.innerHTML = "weak";
+            pass.style.borderColor = "#ff5925";
+            msg.style.color = "#ff5925"
+        }
+        else if(pass.value.length >= 4 && pass.value.length < 8)
+        {
+            str.innerHTML = "medium"; 
+            pass.style.borderColor = "yellow";
+            msg.style.color = "yellow"      
+         
+        }
+          else if(pass.value.length >= 8)
+          {
+            str.innerHTML = "strong";
+            pass.style.borderColor = "green";
+            msg.style.color = "green"
+          }
+
+
+      })
+
+    </script>
+
+</body>
+</html>

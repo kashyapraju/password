@@ -1,0 +1,132 @@
+/* *{
+   margin: 0;
+   padding: 0;
+   font-family: 'Poppins' ,sans-serif; 
+   box-sizing: border-box;
+
+}
+
+.container
+{
+   width: 100%;
+   min-height: 100vh;
+   background: grey; 
+ 
+   padding: 10px;
+ 
+
+}
+
+.calculater
+{
+   width: 100%;
+   max-width: 600px;
+   margin-left: 10%;
+   margin-top: 10%; 
+
+}
+
+
+
+.calculater h1 
+{
+    font-size: 40px;
+    margin-bottom: 30px;
+  
+
+}
+
+.input-box
+{
+    margin: 40px 0;
+    padding: 35px;
+    border-radius: 10px;
+    background-color: beige;
+    display: flex;
+    align-items: center;
+}
+
+.input-box input{
+  flex: 1;
+  margin-right: 20px;
+  padding: 14px 20px;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  border-radius: 5px;
+  position: relative;  
+  min-width: 180px;
+}
+
+ */
+
+ *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' ,sans-serif; 
+    box-sizing: border-box;
+ 
+ }
+
+ body 
+ {
+    background: rgb(219, 198, 198);
+ }
+ .container
+{
+   width: 100vh;
+   height: 100%;
+ 
+   background: rgb(201, 188, 188); 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.input-box
+{
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+
+}
+
+
+.input-box input{
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    color: #fff;
+    background: transparent;
+}
+
+button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+
+}
+
+button img{
+    width: 35px;
+}
+
+#message
+{
+    position: absolute;
+    bottom: -30px;
+    color: white;
+    font-size: 15px;
+    display: none;
+}
+
+span{
+    background-color: white;
+}
